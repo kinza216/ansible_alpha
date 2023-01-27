@@ -21,12 +21,12 @@ env_file_src_path=/home/ubuntu/.env
 env_file_dest_path=/home/ubuntu/web_ui/Project/backend
 docker_compose_file_path=/home/ubuntu/web_ui/Project
 
-[102_vDPI]
-vdpi ansible_host=35.77.103.172 ansible_ssh_pass=@vdpi_pass_file #password: vdpi
+#[102_vDPI]
+#vdpi ansible_host=35.77.103.172 ansible_ssh_pass=@vdpi_pass_file #password: vdpi
 [106_vGUI]
-vgui ansible_host=18.183.190.149 ansible_ssh_pass=@vgui_pass_file #password: vgui
+18.183.190.149 #password: vgui
 [107_vRAD]
-vRAD ansible_host=54.168.104.116 ansible_ssh_pass=@vrad_pass_file #passward: vrad
+54.168.104.116  #passward: vrad
 
 #[108_vDirect]
 #[103_vStore]
