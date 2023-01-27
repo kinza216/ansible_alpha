@@ -5,7 +5,7 @@
   tasks:
   - name: Check if Git is already installed
     stat:
-      path: /home/ansible
+      path: /home/ubuntu
     register: git_installed
   
   - name: Install Git
