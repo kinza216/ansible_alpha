@@ -3,3 +3,5 @@
 [user]
 	email = kinzaarshad216
 	name = kinza216
+[core]
+	sshCommand = /usr/bin/ssh -i ~/.ssh/ansible
