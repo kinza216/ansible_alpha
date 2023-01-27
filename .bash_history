@@ -553,3 +553,21 @@ exit
 sudo su - ubuntu
 cat ~/.ssh/id_rsa.pub 
 cat ~/.ssh/id_rsa
+sudo su - ubuntu
+ls
+cd /
+cd
+sudo su - ubuntu
+pwd
+sudo su - ubuntu
+ls
+ansible-playbook whenpractise1.yml
+git config --global init.defaultBranch main
+git config --global user.email "kinzaarshad216"
+git config --global user.name "kinza216"
+git init
+git config --local core.sshCommand "/usr/bin/ssh -i ~/.ssh/ansible"
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git

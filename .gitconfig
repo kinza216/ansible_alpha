@@ -1,7 +1,7 @@
 [init]
 	defaultBranch = main
 [user]
-	email = kinzaarshad216
-	name = kinza216
+	email = aliza.sabahat22
+	name = AlizaSabahat
 [core]
 	sshCommand = /usr/bin/ssh -i ~/.ssh/ansible
