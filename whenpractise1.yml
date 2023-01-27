@@ -1,6 +1,5 @@
 - name: Install Git
-  hosts: all
-  remote_user: ubuntu
+  hosts: localhost
   become: yes  
   tasks:
   - name: Check if Git is already installed
