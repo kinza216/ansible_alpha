@@ -1,0 +1,11 @@
+---
+- name: Clone repository from Github
+  hosts: all
+  tasks:
+    - name: Clone the repository
+      git:
+        repo: https://kinza216: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@github.com/kinza216/practice-repo.git
+        dest: /home/ubuntu
+      register: git_clone
+    - debug:
+        var: git_clone

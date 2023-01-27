@@ -1,0 +1,36 @@
+[all:vars]
+ansible_connection=ssh
+ansible_user=ubuntu
+ansible_ssh_pass=Black!#%St0ne
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_sudo_pass=Black!#%St0ne
+new_root_pass="Black!#%St0ne"
+ansible_python_interpreter=/usr/bin/python3
+container_count=4
+default_container_name=docker
+default_container_image=ubuntu
+default_container_command=sleep 1d
+github_repo='https://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@github.com/kinza216/practice-repo.git'
+web_ui_path=/home/ubuntu/web_ui
+github_repo_dest_path=/home/ubuntu/web_ui/Project
+env_file_path=/home/ubuntu/web_ui/Project/frontend/src/environments/environment.ts
+db_congig_src_path=/home/ubuntu/database-config
+db_config_dest_path=/home/ubuntu/web_ui
+env_path_for_ls=/home/ubuntu
+env_file_src_path=/home/ubuntu/.env
+env_file_dest_path=/home/ubuntu/web_ui/Project/backend
+docker_compose_file_path=/home/ubuntu/web_ui/Project
+
+[102_vDPI]
+vdpi ansible_host=35.77.103.172 ansible_ssh_pass=@vdpi_pass_file #password: vdpi
+[106_vGUI]
+vgui ansible_host=18.183.190.149 ansible_ssh_pass=@vgui_pass_file #password: vgui
+[107_vRAD]
+vRAD ansible_host=54.168.104.116 ansible_ssh_pass=@vrad_pass_file #passward: vrad
+
+#[108_vDirect]
+#[103_vStore]
+#[104_vAnalyze]
+#[105_vArchive]
+####[107_vNat]
+

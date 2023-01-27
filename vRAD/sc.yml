@@ -1,0 +1,14 @@
+--- # PLAYBOOK FOR HAWKEYE vRAD
+- name: vRAD 
+  hosts: 106_vGUI
+  become: yes
+  tasks:
+### Run script after every minute ###
+    - name: Add script to crontab
+      become: true
+      cron:
+        name: "Run script every minue"
+        minute: "*/1"
+        job: /home/ubuntu/script.sh
+        state: present
+

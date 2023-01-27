@@ -1,0 +1,29 @@
+--- # Temporary using vGUI as host
+- name: vNAT setup
+  hosts: all
+  remote_user: ubuntu
+  become_user: root
+  become: yes
+  pre_tasks:
+    ### Check OS Version and Host Type, if both not matches, then the playbook will be terminated, no other tasks would execute ####
+    - name: Gather host facts
+      setup:
+    - name: Check OS version and Host_type
+      debug:
+         msg: 
+           - "OS version is {{ ansible_distribution_version }} and Host type is {{ ansible_virtualization_role }}"
+    ### To terminate Playbook ####
+    - name: Terminate playbook
+      meta: end_play
+      when: ansible_distribution_version != '21.10' or ansible_virtualization_role != 'guest' # vNAT 21.10 min server requirement
+  tasks:
+    - name: stop_script.sh
+      command: chmod +x /home/ubuntu/team_test_sys/stop_script.sh
+      when: inventory_hostname in groups["106_vGUI"]
+    - name: startscript.sh
+      command: chmod +x /home/ubuntu/team_test_sys/startscript.sh
+      when: inventory_hostname in groups["106_vGUI"]
+    - name: start_mirror.sh
+      command: chmod +x /home/ubuntu/team_test_sys/start_mirror.sh
+      when: inventory_hostname in groups["106_vGUI"]
+

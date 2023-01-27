@@ -1,0 +1,22 @@
+---
+- name: Add block of data and remove existing data in detail array
+  hosts: 107_vRAD
+  become: true
+  vars:
+    detail_file: /etc/freeradius/3.0/mods-enabled/detail
+    block: |
+      detail {
+          filename = ${radacctdir}/detail-%Y-%m-%d-log
+          escape_filenames = no
+          permissions = 0600
+          header = "%t"
+      }
+  tasks:
+  - name: Remove existing data in detail array
+    shell: >
+      echo "" > {{ detail_file }} 
+
+  - name: Add new block of data to detail array
+    blockinfile:
+      path: "{{ detail_file }}"
+      block: "{{ block }}"

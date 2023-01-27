@@ -1,0 +1,12 @@
+---
+- name: Check NIC speed
+  hosts: all
+  gather_facts: no
+
+  tasks:
+  - name: Check NIC speed
+    command: ethtool {{ nic_name }}
+    register: nic_speed
+  - name: Print NIC speed
+    debug:
+      msg: "{{ nic_name }} speed is {{ nic_speed.stdout_lines[1] }}"

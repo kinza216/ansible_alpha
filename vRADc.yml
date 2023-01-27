@@ -1,0 +1,99 @@
+--- # PLAYBOOK FOR HAWKEYE vRAD
+- name: vRAD 
+  hosts: 107_vRAD
+  remote_user: ubuntu
+  become: yes
+  vars:
+     clients_conf_block: |
+       client ALLNAS {
+              ipaddr = 0.0.0.0
+              secret = pakistan
+            }
+     detail_file_block: |
+       detail {
+                filename = ${radacctdir}/detail-%Y-%m-%d-log
+                escape_filenames = no
+                permissions = 0600
+                header = "%t"
+            }
+     logdir: /dev/shm
+     radacctdir: ${logdir}/radacct
+     clients_conf_path: /etc/freeradius/3.0/clients.conf
+     radius_conf_path: /etc/freeradius/3.0/radiusd.conf
+     detail_file_path: /etc/freeradius/3.0/mods-enabled/detail
+     script_file_path: /home/ubuntu/script.sh
+     script_content: |
+          #!/bin/bash
+          mkdir /dev/shm/radacct
+          touch /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log
+          chmod 777 /dev/shm/radacct -R
+          cp /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log /dev/shm/radacct/detail-$(date +"%Y-%m-%d_%H-%M-%S")_1
+          echo " " > /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log
+          rm -f /dev/shm/radacct/detail-$(date --date="yesterday" +"%Y-%m-%d")-log
+          find /dev/shm/radacct/* -mmin +5 -exec rm {} \;
+     script_path: /home/ubuntu/script.sh
+  tasks:
+    - name: Install Libraries
+ ### Install Libraries ###
+      apt:
+         update_cache: yes
+         pkg: 
+           - "net-tools"
+           - "freeradius"
+           - "freeradius-utils"
+         state: present
+         update_cache: true
+
+  ### Change Configuration ###
+    - name: Add the clients_conf_block to the end of the clients.conf file
+      ansible.builtin.lineinfile:
+        path: "{{clients_conf_path}}"
+        line: "{{clients_conf_block}}"
+        insertafter: EOF
+
+  ### Change in radiusd.conf file ###
+    - name: Update logdir in radiusd.conf
+      lineinfile:
+       path: "{{radius_conf_path}}"
+       regexp: '^logdir'
+       line: "logdir = {{ logdir }}"
+
+  ### update detail file with data ###
+    - name: Clear content of file
+      shell: >
+        echo "" > {{ detail_file_path }} 
+
+    - name: Add block of data to file
+      blockinfile:
+        path: "{{ detail_file_path }}"
+        block: "{{ detail_file_block }}"
+    
+  ### Create script file ######
+    - name: Create script file
+      file:
+       path: "{{ script_file_path }}"
+       state: touch
+
+  ### Add content to script file ####
+    - name: Add content to script file
+      lineinfile:
+       path: "{{ script_file_path }}"
+       line: "{{ item }}"
+       state: present
+      with_items: "{{ script_content.split('\n') }}"
+
+    - name: Give execute permission to script
+      shell: chmod +x {{ script_path }}
+
+   ### Run script after every minute ###
+    - name: Add script to crontab
+      cron:
+        name: "Run script every minute"
+        minute: "*/1"
+        job: "{{ script_path }}"
+
+  ### Restart FreeRADIUS service ###
+
+    - name: Restart FreeRADIUS service
+      become: true
+      shell: systemctl restart freeradius

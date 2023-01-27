@@ -1,0 +1,12 @@
+--- # PLAYBOOK FOR HAWKEYE vRAD
+- name: vRAD 
+  hosts: 106_vGUI
+  remote_user: ubuntu
+  become: yes
+  tasks:
+  - name: Create a file
+    ansible.builtin.file:
+      path: /home/ubuntu/script.sh
+      state: touch
+      mode: '0644'
+   

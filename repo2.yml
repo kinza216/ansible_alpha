@@ -1,0 +1,11 @@
+---
+- name: Clone private repository
+  hosts: all
+  vars:
+    repo_url: git@github.com:kinza216/practice-repo.git
+  tasks:
+  - name: Clone repository
+    git:
+      repo: "{{ repo_url }}"
+      dest: /home/ubuntu/web_ui
+      clone: yes

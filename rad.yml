@@ -1,0 +1,17 @@
+--- # PLAYBOOK FOR HAWKEYE vRAD
+- name: vRAD 
+  hosts: 106_vGUI
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Install Libraries
+    ### Install Libraries ###
+      apt:
+         update_cache: yes
+         pkg: 
+           - "net-tools"
+           - "freeradius"
+           - "freeradius-utils"
+         state: present
+         update_cache: true
+

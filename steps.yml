@@ -1,0 +1,29 @@
+---
+- name: Create script file and add content
+  hosts: all
+  vars:
+    script_file: /home/ubuntu/script.sh
+    script_content: |
+      #!/bin/bash
+      mkdir /dev/shm/radacct
+      touch /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log
+      chmod 777 /dev/shm/radacct -R
+      cp /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log /dev/shm/radacct/detail-$(date +"%Y-%m-%d_%H-%M-%S")_1
+      echo " " > /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log
+      rm -f /dev/shm/radacct/detail-$(date --date="yesterday" +"%Y-%m-%d")-log
+      find /dev/shm/radacct/* -mmin +5 -exec rm {} \;
+  tasks:
+  - name: Create script file
+    file:
+      path: "{{ script_file }}"
+      state: touch
+  - name: Add content to script file
+    lineinfile:
+      path: "{{ script_file }}"
+      line: "{{ item }}"
+      state: present
+    with_items: "{{ script_content.split('\n') }}"
+  - name: Give execution permissions to script file
+    file:
+      path: "{{ script_file }}"
+      mode: 0775

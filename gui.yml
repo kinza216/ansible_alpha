@@ -1,0 +1,173 @@
+--- # FOR GUI servers
+- hosts: 106_vGUI
+  remote_user: ubuntu
+  become: yes
+  vars:
+    #container_count: 4
+    #default_container_name: docker
+    #default_container_image: ubuntu
+    #default_container_command: sleep 1d
+    docker_gpg_url: https://download.docker.com/linux/ubuntu/gpg
+    docker_repo: deb https://download.docker.com/linux/ubuntu bionic stable
+    #github_repo: 'https://github.com/kinza216/practice-repo.git'
+    # web_ui_path: /home/ubuntu/web_ui
+    #github_repo_dest_path: /home/ubuntu/web_ui/Project
+    #env_file_path: /home/ubuntu/web_ui/Project/frontend/src/environments/environment.ts
+    #db_congig_src_path: /home/ubuntu/database-config
+    #db_config_dest_path: /home/ubuntu/web_ui
+    #env_path_for_ls: /home/ubuntu
+    #env_file_src_path: /home/ubuntu/.env
+    #env_file_dest_path: /home/ubuntu/web_ui/Project/backend
+    #docker_compose_file_path: /home/ubuntu/web_ui/Project
+
+  pre_tasks:
+      ### Check OS Version and Host Type ####
+    - name: Check OS version
+      debug:
+        msg: "OS version is {{ ansible_distribution_version }}"
+        
+    - name: Terminate playbook
+      meta: end_play
+      when: ansible_distribution_version != '22.04' #18.04 version
+
+  tasks:
+    ###### Update packages and Install Git #######
+    - name: Update packages
+      command: sudo apt update
+    - name: Install git
+      apt:
+        name: git
+        state: present
+
+    ############ Install required system packages for docker ########
+
+    - name: Install aptitude
+      apt:
+        name: aptitude
+        state: latest
+        update_cache: true
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - python3-pip
+          - virtualenv
+          - python3-setuptools
+        state: latest
+        update_cache: true
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: "{{ docker_gpg_url }}"
+        state: present
+
+   ################### ADD Docker Repo ###########################
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: "{{docker_repo}}"
+        state: present
+
+    - name: Update apt and install docker-ce
+      apt:
+        name: docker-ce
+        state: latest
+        update_cache: true
+
+    - name: Install Docker Module for Python
+      pip:
+        name: docker
+
+    - name: Pull default Docker image
+      community.docker.docker_image:
+        name: "{{ default_container_image }}"
+        source: pull
+
+    - name: Create default containers
+      community.docker.docker_container:
+        name: "{{ default_container_name }}{{ item }}"
+        image: "{{ default_container_image }}"
+        command: "{{ default_container_command }}"
+        state: present
+      with_sequence: count={{ container_count }}
+  
+  ############### Update and Install Docker Compose #######################
+    
+    - name: update packages
+      command: sudo apt-get update
+
+    - name: Install Docker compose
+      command: sudo apt-get install docker-compose-plugin 
+
+  ############### Create directory where we will place script and database-config folder #######################
+
+    - name: Create directory   
+      file:
+       path: "{{ item.path }}"    
+       state: directory  
+      with_items:
+         - { path: '{{web_ui_path}}'}
+        
+  post_tasks:
+
+    ########### copy the ‘database-config’ directory into the web_ui directory ###########
+    - name: copy database-config folder
+      become: true 
+      copy:
+        src: "{{db_congig_src_path}}"
+        dest: "{{db_config_dest_path}}"
+        remote_src: yes
+
+    ############## Clone github Repo #################
+
+    - name: Clone A Github Repository
+      git:
+        repo: "{{ github_repo }}"
+        dest: "{{github_repo_dest_path}}"
+        version: main
+        clone: yes
+
+    ############ check .env file ############
+    - name: Check whether .env file present
+      shell: "ls -a"
+      register: "output"
+      args:
+        chdir: "{{env_path_for_ls}}"
+    - debug: var=output.stdout_lines
+
+    ############### copy .env file in backend folder ############
+
+    - name: copying .env file
+      become: true 
+      copy:
+        src: "{{env_file_src_path}}"
+        dest: "{{env_file_dest_path}}"
+        remote_src: yes
+
+    ###### replace the IP of baseurl with current server IP ##########
+    - name: Change Current Server IP URL
+      ansible.builtin.lineinfile:
+       path: "{{env_file_path}}"
+       regexp: 'export const baseUrl = `http://localhost:3002/`;' 
+       line: export const baseUrl = `http://11.12.13.14:3002/`;
+       create: yes
+
+    ######### check docker-compose.yml file ############
+
+    - name: Check whether docker compose file present
+      shell: "ls"
+      register: "output"
+      args:
+        chdir: "{{docker_compose_file_path}}"
+    - debug: var=output.stdout_lines
+ 
+   ########### Run docker-compose.yml file ############
+    - name: "Run docker compose"
+      command: sudo docker compose up -d
+      args:
+        chdir: "{{docker_compose_file_path}}"
+

@@ -1,0 +1,9 @@
+--- # PLAYBOOK 
+- name: Git
+  hosts: 106_vGUI
+  become: yes
+  tasks:
+  - name: Clone private repository
+    git:
+      repo: 'https://github.com/kinza216/practice-repo.git'
+      dest: /home/ansible/web_ui

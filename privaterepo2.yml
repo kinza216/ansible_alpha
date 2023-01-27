@@ -1,0 +1,12 @@
+- name: Clone GitHub project
+  hosts: all
+  remote_user: ubuntu
+  become_user: root
+  become: yes
+  tasks:
+  - name: Clone private repository
+    git:
+     repo: 'https://github.com/kinza216/practice-repo.git'
+     dest: /home/ubuntu
+     version: master
+     key_file: ~/.ssh/id_rsa

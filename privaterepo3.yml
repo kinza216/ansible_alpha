@@ -1,0 +1,20 @@
+- name: Clone private repository
+  hosts: all
+  remote_user: ubuntu
+  become_user: root
+  become: yes 
+  vars: 
+   repo_url: https://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@github.com/kinza216/practice-repo.git
+  pre_tasks:
+    - name: Create directory
+      file:
+        path: /home/ubuntu/abcfolder
+        state: directory
+        mode: 0755
+  tasks:
+  - name: Clone repository
+    git:
+      repo: "{{ repo_url }}"
+      dest: /home/ubuntu/abcfolder
+      version: main
+        

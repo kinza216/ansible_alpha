@@ -1,0 +1,25 @@
+--- # PLAYBOOK FOR HAWKEYE vRAD
+- name: vRAD 
+  hosts: 106_vGUI
+  remote_user: ubuntu
+  become: yes
+  vars:
+    lines_to_add:
+     - "mkdir /dev/shm/radacct"
+     - "touch /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log"
+     - "chmod 777 /dev/shm/radacct -R"
+     - "cp /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log /dev/shm/radacct/detail-$(date +"%Y-%m-%d_%H-%M-%S")_1"
+     - "echo " " > /dev/shm/radacct/detail-$(date +"%Y-%m-%d")-log"
+     - "rm -f /dev/shm/radacct/detail-$(date --date="yesterday" +"%Y-%m-%d")-log"
+     - "find /dev/shm/radacct/* -mmin +5 -exec rm {} \;"
+  tasks:
+     - name: Create a file
+       ansible.builtin.file:
+         path: /home/ubuntu/script.sh
+         state: touch
+         mode: '0644'
+     - name: Add multiple lines to a file
+       ansible.builtin.lineinfile:
+         path: /home/ubuntu/script.sh
+         line: "{{ item }}"
+       with_items: "{{ lines_to_add }}"

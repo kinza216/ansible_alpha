@@ -1,0 +1,39 @@
+--- # PLAYBOOK FOR HAWKEYE vRAD
+- name: vRAD 
+  hosts: 107_vRAD
+  remote_user: ubuntu
+  become: yes
+  vars:
+     clients_conf_block: |
+       client ALLNAS {
+              ipaddr = 0.0.0.0
+              secret = pakistan
+            }
+
+     logdir: /dev/shm
+     radacctdir: ${logdir}/radacct
+  tasks:
+    - name: Install Libraries
+    ### Install Libraries ###
+      apt:
+         update_cache: yes
+         pkg: 
+           - "net-tools"
+           - "freeradius"
+           - "freeradius-utils"
+         state: present
+         update_cache: true
+
+    ### Change Configuration ###
+    # - name: Add the clients_conf_block to the end of the clients.conf file
+    #  ansible.builtin.lineinfile:
+    #    path: /etc/freeradius/3.0/clients.conf
+    #    line: "{{clients_conf_block}}"
+    #    insertafter: EOF
+
+    ### Change in radiusd.conf file ###
+    - name: Update logdir in radiusd.conf
+      lineinfile:
+       path: /etc/freeradius/3.0/radiusd.conf
+       regexp: '^logdir'
+       line: "logdir = {{ logdir }}"

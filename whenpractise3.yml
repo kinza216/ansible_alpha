@@ -1,0 +1,11 @@
+---
+- name: Create a file using when statement
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create file
+      file:
+        path: /home/ubuntu/testfile.txt
+        state: touch
+      when: ansible_distribution_version != '22.10'
+
