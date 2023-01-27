@@ -550,3 +550,6 @@ cd /home
 ls - a
 ls -a
 exit
+sudo su - ubuntu
+cat ~/.ssh/id_rsa.pub 
+cat ~/.ssh/id_rsa
