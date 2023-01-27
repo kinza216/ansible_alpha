@@ -1,5 +1,5 @@
 - name: Install Git
-  hosts: localhost
+  hosts: 18.183.190.149
   become: yes  
   tasks:
   - name: Check if Git is already installed
