@@ -571,3 +571,122 @@ git add .
 git commit -m "initial"
 git branch -M main
 git remote add origin git@github.com:kinza216/ansible_alpha.git
+sudo su - ubuntu
+vi whenpractise1.yml
+git config --global init.defaultBranch main
+git config --global user.email "kinzaarshad216"
+git config --global user.name "kinza216"
+git init
+/usr/bin/ssh -i ~/.ssh/ansible
+ls -a
+cd .ssh
+ls
+cd
+pwd
+id_rsa.pub
+cd id_rsa.pub
+cd /.ssh/id_rsa.pub
+cd .ssh
+cd id_rsa
+id_rsa
+cd
+git config --local core.sshCommand "/usr/bin/ssh -i ~/.ssh/ansible"
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git push -u origin main
+/usr/bin/ssh -i
+-s
+ssh-keygen -i
+cd /home/ubuntu/.ssh/id_rsa
+cd /home/ubuntu/.ssh/id_rsa/id_rsa.pub
+at id_rsa.pub
+cat id_rsa.pub
+cd .ssh
+cat id_rsa.pub
+cd
+cd /home/ubuntu/.ssh -i 
+cd /home/ubuntu/ssh -i 
+cd /home/ubuntu/ssh 
+git config --local core.sshCommand "/home/ubuntu/.ssh/id_rsa-i ~/.ssh/ubuntu"
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git push -u origin main
+git config --local core.sshCommand "/home/ubuntu/.ssh/id_rsa-i ~/.ssh/ansible"
+~/.ssh/ansible
+V
+cd  ansible
+git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/ansible"
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git push -u origin main
+cat ~/.ssh/id_rsa
+git config --local core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+git add.
+git add .
+git commit -m "initial"
+git branch -M main
+cat ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub 
+sudo su - ubuntu
+ansible-vault decrypt hosts
+vi hosts
+vi whenpractise1.yml
+git init
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git branch -M main
+git push -u origin main
+vi hosts
+ls
+vi hosts
+git init
+git add .
+git commit -m "initial"
+git branch -M main
+git push -u origin main
+sudo su - ubuntu
+git config --global init.defaultBranch main
+git config --global user.email "aliza.sabahat22"
+git config --global user.name "AlizaSabahat"
+git init
+git config --local core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:AlizaSabahat/ansible.git
+git push -u origin main
+git config --global init.defaultBranch main
+git config --global user.email "kinzaarshad216"
+git config --global user.name "kinza216"
+git init
+git config --local core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git push -u origin main
+vi whenpractise1.yml
+git init
+git add.
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git push -u origin main
+vi whenpractise1.yml
+git init
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin git@github.com:kinza216/ansible_alpha.git
+git push -u origin main
+cd ubuntu/roles
+sudo su -

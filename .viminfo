@@ -15,13 +15,13 @@
 
 # Command Line History (newest to oldest):
 :wq!
-|2,0,1674849416,,"wq!"
+|2,0,1674901659,,"wq!"
+:wq
+|2,0,1674901590,,"wq"
 :WQ!
 |2,0,1674849406,,"WQ!"
 :wwq!
 |2,0,1674496211,,"wwq!"
-:wq
-|2,0,1674461823,,"wq"
 
 # Search String History (newest to oldest):
 ? \<1\>
@@ -39,230 +39,260 @@
 |3,1,36,0,1,0,1674499110," "
 
 # File marks:
-'0  29  0  ~/hosts
-|4,48,29,0,1674849416,"~/hosts"
-'1  26  10  ~/hosts
-|4,49,26,10,1674849274,"~/hosts"
-'2  27  0  ~/hosts
-|4,50,27,0,1674849274,"~/hosts"
-'3  2  11  ~/whenpractise1.yml
-|4,51,2,11,1674849005,"~/whenpractise1.yml"
-'4  34  14  ~/hosts
-|4,52,34,14,1674848983,"~/hosts"
-'5  34  14  ~/hosts
-|4,53,34,14,1674848983,"~/hosts"
-'6  34  14  ~/hosts
-|4,54,34,14,1674848983,"~/hosts"
-'7  34  14  ~/hosts
-|4,55,34,14,1674848983,"~/hosts"
-'8  2  22  ~/whenpractise1.yml
-|4,56,2,22,1674846077,"~/whenpractise1.yml"
-'9  2  17  ~/whenpractise1.yml
-|4,57,2,17,1674845868,"~/whenpractise1.yml"
+'0  1  0  ~/ansible.cfg
+|4,48,1,0,1674901659,"~/ansible.cfg"
+'1  8  30  ~/create_admin_user.yml
+|4,49,8,30,1674901590,"~/create_admin_user.yml"
+'2  4  15  ~/create_admin_user/vars/main.yml
+|4,50,4,15,1674901483,"~/create_admin_user/vars/main.yml"
+'3  4  15  ~/create_admin_user/vars/main.yml
+|4,51,4,15,1674901411,"~/create_admin_user/vars/main.yml"
+'4  2  33  ~/create_admin_user/tasks/main.yml
+|4,52,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+'5  1  0  ~/create_admin_user.yml
+|4,53,1,0,1674901043,"~/create_admin_user.yml"
+'6  1  0  ~/create_admin_user.yml
+|4,54,1,0,1674901043,"~/create_admin_user.yml"
+'7  29  0  ~/hosts
+|4,55,29,0,1674849416,"~/hosts"
+'8  26  10  ~/hosts
+|4,56,26,10,1674849274,"~/hosts"
+'9  27  0  ~/hosts
+|4,57,27,0,1674849274,"~/hosts"
 
 # Jumplist (newest first):
+-'  1  0  ~/ansible.cfg
+|4,39,1,0,1674901659,"~/ansible.cfg"
+-'  8  30  ~/create_admin_user.yml
+|4,39,8,30,1674901590,"~/create_admin_user.yml"
+-'  8  30  ~/create_admin_user.yml
+|4,39,8,30,1674901590,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901567,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901567,"~/create_admin_user.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901483,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901483,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901483,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901483,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901411,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901411,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901411,"~/create_admin_user/vars/main.yml"
+-'  4  15  ~/create_admin_user/vars/main.yml
+|4,39,4,15,1674901411,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  1  0  ~/create_admin_user/vars/main.yml
+|4,39,1,0,1674901183,"~/create_admin_user/vars/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  2  33  ~/create_admin_user/tasks/main.yml
+|4,39,2,33,1674901162,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user/tasks/main.yml
+|4,39,1,0,1674901059,"~/create_admin_user/tasks/main.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
+-'  1  0  ~/create_admin_user.yml
+|4,39,1,0,1674901043,"~/create_admin_user.yml"
 -'  29  0  ~/hosts
 |4,39,29,0,1674849416,"~/hosts"
--'  26  10  ~/hosts
-|4,39,26,10,1674849318,"~/hosts"
--'  27  0  ~/hosts
-|4,39,27,0,1674849274,"~/hosts"
--'  34  14  ~/hosts
-|4,39,34,14,1674849233,"~/hosts"
--'  34  14  ~/hosts
-|4,39,34,14,1674849233,"~/hosts"
--'  2  11  ~/whenpractise1.yml
-|4,39,2,11,1674849005,"~/whenpractise1.yml"
--'  2  11  ~/whenpractise1.yml
-|4,39,2,11,1674849005,"~/whenpractise1.yml"
--'  2  11  ~/whenpractise1.yml
-|4,39,2,11,1674849005,"~/whenpractise1.yml"
--'  2  11  ~/whenpractise1.yml
-|4,39,2,11,1674849005,"~/whenpractise1.yml"
--'  34  14  ~/hosts
-|4,39,34,14,1674848983,"~/hosts"
--'  34  14  ~/hosts
-|4,39,34,14,1674848983,"~/hosts"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  22  ~/whenpractise1.yml
-|4,39,2,22,1674846077,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  2  17  ~/whenpractise1.yml
-|4,39,2,17,1674845868,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  7  23  ~/whenpractise1.yml
-|4,39,7,23,1674845833,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  8  23  ~/whenpractise1.yml
-|4,39,8,23,1674837594,"~/whenpractise1.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
--'  168  0  ~/vGUI/vm.yml
-|4,39,168,0,1674753323,"~/vGUI/vm.yml"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
+-'  29  0  ~/hosts
+|4,39,29,0,1674849416,"~/hosts"
 
 # History of marks within files (newest to oldest):
+
+> ~/ansible.cfg
+	*	1674901658	0
+	"	1	0
+	^	1	0
+
+> ~/create_admin_user.yml
+	*	1674901589	0
+	"	8	30
+	^	8	31
+	.	8	30
+	+	8	30
+
+> ~/create_admin_user/vars/main.yml
+	*	1674901482	0
+	"	4	15
+	^	4	16
+	.	4	15
+	+	10	15
+	+	4	15
+
+> ~/create_admin_user/tasks/main.yml
+	*	1674901160	0
+	"	2	33
+	^	2	34
+	.	3	0
+	+	23	21
+	+	24	0
+	+	1	3
+	+	3	0
 
 > ~/hosts
 	*	1674849412	0
